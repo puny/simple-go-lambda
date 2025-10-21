@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      go: 1.22
+  build:
+    commands:
+      - echo "Building Go binary..."
+      - GOOS=linux GOARCH=amd64 go build -o main main.go
+      - zip function.zip main
+artifacts:
+  files:
+    - function.zip

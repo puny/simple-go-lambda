@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - simpleGoLambda:
+      Type: AWS::Lambda::Function
+      Properties:
+        Handler: main        
+        Name: "simple-go-lambda"
+        Alias: live
+        CurrentVersion: "1"
