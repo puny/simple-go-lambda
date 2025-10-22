@@ -10,12 +10,12 @@ phases:
   build:
     commands:
       - echo "Building Go binary..."
-      - GOOS=linux GOARCH=amd64 go build -o main main.go      
+      - GOOS=linux GOARCH=amd64 go build -o bootstrap main.go      
   
   post_build:
     commands:
       - echo "Zipping artifact..."
-      - zip function.zip main
+      - zip function.zip bootstrap
       - echo "Build completed on `date`"
 artifacts:
   files:
